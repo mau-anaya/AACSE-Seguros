@@ -1,0 +1,21 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-labelledby="title desc">
+  <title id="title">Logo AACSE Seguros</title>
+  <desc id="desc">Marca geométrica color arena de AACSE Seguros</desc>
+  <rect width="360" height="360" fill="#f8f8fc"/>
+  <g transform="translate(34 10)">
+    <path d="M112 0 0 58v78l112 58 112-58V58z" fill="#d8c09e"/>
+    <path d="M0 58 112 116 224 58 112 0z" fill="#dbc49f"/>
+    <path d="M0 58v78l112 58v-78z" fill="#f1e4c8"/>
+    <path d="M112 116v222l112-58V58z" fill="#b89d80"/>
+    <path d="M112 116 224 58v222l-54 28V166l-58 30z" fill="#b29578"/>
+    <path d="M112 116v222L56 309V165z" fill="#f3e6c8"/>
+    <path d="M56 165 112 194l58-30-56-28z" fill="#e7d4b4"/>
+    <path d="M170 92 238 56l68 36-68 36z" fill="#d6bd98"/>
+    <path d="M238 128v150l68-36V92z" fill="#a98d72"/>
+    <path d="M170 92v150l68 36V128z" fill="#c2a586"/>
+    <path d="M0 195 57 166l57 29-57 30z" fill="#ead8b8"/>
+    <path d="M0 195v72l57 30v-72z" fill="#f1e2c3"/>
+    <path d="M57 225v72l57-30v-72z" fill="#b89b7d"/>
+    <path d="M112 0 0 58v16l112 58 112-58V58z" fill="#fff2d5" opacity="0.26"/>
+  </g>
+</svg>

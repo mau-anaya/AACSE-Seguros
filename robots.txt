@@ -1,0 +1,54 @@
+﻿# AACSE Seguros Landing Page
+
+Landing page estática lista para publicarse en GitHub Pages o Vercel.
+
+## Vista previa local
+
+Desde esta carpeta ejecuta:
+
+```bash
+npm run preview
+```
+
+Luego abre:
+
+```text
+http://127.0.0.1:4173/
+```
+
+También puedes abrir `index.html` directamente, aunque para probar enlaces externos y assets es mejor usar la vista previa local.
+
+## Publicar en GitHub Pages
+
+1. Crea un repositorio en GitHub.
+2. Sube todo el contenido de esta carpeta.
+3. En GitHub, entra a Settings > Pages.
+4. En Build and deployment selecciona Deploy from a branch.
+5. Selecciona la rama `main` y la carpeta `/root`.
+6. Guarda los cambios y espera a que GitHub genere la URL pública.
+
+## Publicar en Vercel
+
+1. Importa el repositorio en Vercel.
+2. Framework Preset: Other.
+3. Build Command: vacío.
+4. Output Directory: vacío o `.`.
+5. Deploy.
+
+## Archivos principales
+
+- `index.html`: página principal.
+- `assets/logo-aacse.jpg`: logo oficial usado en la cabecera.
+- `robots.txt`: reglas básicas para buscadores.
+- `sitemap.xml`: mapa del sitio.
+- `vercel.json`: configuración mínima para Vercel.
+- `.nojekyll`: evita procesamiento Jekyll en GitHub Pages.
+
+## Antes de publicar con dominio final
+
+Cuando tengas la URL final, actualiza estos lugares:
+
+- `index.html`: `rel="canonical"`.
+- `index.html`: campo `url` del JSON-LD.
+- `sitemap.xml`: etiqueta `<loc>`.
+- `robots.txt`: URL del sitemap.
