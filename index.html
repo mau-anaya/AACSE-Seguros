@@ -62,7 +62,8 @@
   }
   .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:var(--maxw);margin:0 auto;}
   .brand{display:flex;align-items:center;gap:12px;font-family:'Fraunces',serif;font-size:1.05rem;color:var(--navy);font-weight:600;}
-  .brand img{width:44px;height:44px;object-fit:contain;flex:none;}
+  .brand-mark{width:44px;height:44px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex:none;padding:6px;}
+  .brand img{width:100%;height:100%;object-fit:contain;filter:brightness(1.15);}
   .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:400;font-size:0.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
   nav.links{display:flex;gap:34px;align-items:center;}
   nav.links a{font-size:0.92rem;color:var(--ink-soft);transition:color .2s;position:relative;}
@@ -229,7 +230,7 @@
 <header>
   <div class="nav">
     <a href="#inicio" class="brand">
-      <img src="logo-aacse.jpg" alt="Logo AACSE">
+      <span class="brand-mark"><img src="logo-aacse.png" alt="Logo AACSE"></span>
       <span>AACSE<small>Anaya Asesoría y Consultoría en Seguros</small></span>
     </a>
     <nav class="links">
@@ -417,7 +418,7 @@
         <div class="advisor-card">
           <div class="role">Agente de Seguros</div>
           <h3>Lic. Francisco Javier Zamora Funes</h3>
-          <p class="desc">Asesoría y atención personalizada. Oficinas Ciudad de México.</p>
+          <p class="desc">Asesoría y atención personalizada.</p>
           <div class="advisor-actions">
             <a class="btn btn-gold" href="https://wa.me/525525624253?text=Hola%20Francisco%2C%20quiero%20recibir%20asesor%C3%ADa%20de%20AACSE%20Seguros" target="_blank" rel="noopener">WhatsApp 55 2562 4253</a>
             <a class="btn btn-outline" href="https://mail.google.com/mail/?view=cm&fs=1&to=justerini52@gmail.com&su=Asesor%C3%ADa%20AACSE%20Seguros&body=Hola%20Francisco%2C%20quiero%20recibir%20asesor%C3%ADa%20sobre%20un%20seguro.%20Gracias." target="_blank" rel="noopener">Enviar correo</a>
