@@ -1,622 +1,457 @@
-﻿<!doctype html>
+<!DOCTYPE html>
 <html lang="es-MX">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AACSE | Anaya Asesoría y Consultoría en Seguros</title>
-  <meta name="description" content="AACSE Seguros ofrece asesoría especializada para seguros de gastos médicos, vida, autos, hogar, empresas y coberturas especializadas en México." />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="AACSE Seguros" />
-  <meta name="theme-color" content="#12355b" />
-  <link rel="canonical" href="https://aacse-seguros.vercel.app/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="es_MX" />
-  <meta property="og:title" content="AACSE Seguros | Protección para tu empresa y patrimonio" />
-  <meta property="og:description" content="Asesoría clara y especializada en seguros para personas, familias, autos, empresas, vida, hogar y gastos médicos." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "InsuranceAgency",
-    "name": "AACSE",
-    "description": "Anaya Asesoría y Consultoría en Seguros para personas, familias, profesionales y empresas.",
-    "areaServed": "MX",
-    "telephone": "+52 56 4470 2939",
-    "email": "gerardo.a.anaya.funes@gmail.com",
-    "url": "https://aacse-seguros.vercel.app/",
-    "sameAs": ["https://wa.me/525644702939", "https://www.instagram.com/anaya_seguros_"]
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AACSE Seguros | Protección para tu empresa y patrimonio</title>
+<meta name="description" content="AACSE Seguros ofrece asesoría especializada en seguros de gastos médicos, vida, autos, hogar, empresas y coberturas especializadas en México.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0F2C4C;
+    --navy-deep:#0A2038;
+    --gold:#AD8A52;
+    --gold-light:#C9AC78;
+    --cream:#FAF7F1;
+    --sand:#EFE8DA;
+    --ink:#1C2530;
+    --ink-soft:#4B5563;
+    --white:#FFFFFF;
+    --radius:2px;
+    --maxw:1160px;
   }
-  </script>
-  <style>
-    :root {
-      --ink: #17202f;
-      --navy: #12355b;
-      --blue: #2563eb;
-      --teal: #157a6e;
-      --gold: #b78b45;
-      --paper: #ffffff;
-      --mist: #f4f7fb;
-      --line: #dfe6ef;
-      --muted: #64748b;
-      --shadow: 0 18px 48px rgba(18, 53, 91, 0.14);
-      --radius: 18px;
-    }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Source Sans 3',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+    color:var(--navy);
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:12px 20px;z-index:200;}
+  .skip-link:focus{left:16px;top:16px;}
 
-    * { box-sizing: border-box; }
+  /* ---------- Signature diamond motif (from the cubic AACSE mark) ---------- */
+  .facet{
+    display:inline-block;width:10px;height:10px;
+    background:var(--gold);
+    transform:rotate(45deg);
+    flex:none;
+  }
+  .facet-row{display:flex;align-items:center;gap:10px;}
+  .facet-rule{flex:1;height:1px;background:linear-gradient(90deg,var(--gold) 0%,transparent 100%);}
 
-    html { scroll-behavior: smooth; }
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(250,247,241,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(15,44,76,0.08);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:var(--maxw);margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Fraunces',serif;font-size:1.05rem;color:var(--navy);font-weight:600;}
+  .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;}
+  .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:400;font-size:0.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
+  nav.links{display:flex;gap:34px;align-items:center;}
+  nav.links a{font-size:0.92rem;color:var(--ink-soft);transition:color .2s;position:relative;}
+  nav.links a:hover{color:var(--navy);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 24px;font-size:0.9rem;font-weight:600;
+    border-radius:var(--radius);border:1px solid transparent;
+    transition:all .2s ease;letter-spacing:.01em;
+  }
+  .btn-gold{background:var(--gold);color:#fff;}
+  .btn-gold:hover{background:var(--navy);}
+  .btn-outline{border-color:rgba(15,44,76,0.25);color:var(--navy);}
+  .btn-outline:hover{border-color:var(--navy);background:var(--navy);color:#fff;}
+  .menu-toggle{display:none;background:none;border:none;font-size:1.5rem;color:var(--navy);cursor:pointer;}
+  .mobile-menu{display:none;flex-direction:column;padding:8px 32px 22px;border-top:1px solid rgba(15,44,76,0.08);}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{padding:12px 0;font-size:0.98rem;color:var(--navy);border-bottom:1px solid rgba(15,44,76,0.06);}
+  .mobile-menu a:last-child{border-bottom:none;}
 
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background: var(--mist);
-      line-height: 1.6;
-    }
+  /* ---------- Floating WhatsApp button ---------- */
+  .wa-float{
+    position:fixed;right:24px;bottom:24px;z-index:150;
+    width:56px;height:56px;border-radius:50%;
+    background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.5rem;box-shadow:0 8px 24px rgba(15,44,76,0.35);
+    transition:transform .2s ease, background .2s ease;
+  }
+  .wa-float:hover{background:var(--gold);transform:translateY(-2px);}
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background:
-        linear-gradient(120deg, rgba(21, 122, 110, 0.10), transparent 34%),
-        linear-gradient(300deg, rgba(183, 139, 69, 0.11), transparent 32%);
-    }
+  /* ---------- Scroll reveal ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
 
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    padding:96px 0 110px;
+    background:
+      radial-gradient(1100px 500px at 85% -10%, rgba(173,138,82,0.14), transparent 60%),
+      var(--cream);
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:0.78rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:26px;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem,4.6vw,3.6rem);
+    line-height:1.08;max-width:780px;margin-bottom:24px;
+  }
+  .hero-sub{max-width:560px;color:var(--ink-soft);font-size:1.08rem;margin-bottom:38px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:64px;}
 
-    .container {
-      width: min(1120px, calc(100% - 32px));
-      margin-inline: auto;
-    }
+  .stat-bar{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border-top:1px solid rgba(15,44,76,0.12);
+    border-bottom:1px solid rgba(15,44,76,0.12);
+    padding:36px 0;
+  }
+  .stat{padding:0 28px;border-left:1px solid rgba(15,44,76,0.12);}
+  .stat:first-child{border-left:none;padding-left:0;}
+  .stat .num{font-family:'Fraunces',serif;font-size:2.1rem;color:var(--navy);font-weight:500;}
+  .stat .label{font-size:0.86rem;color:var(--ink-soft);margin-top:4px;}
+  .insurers-line{margin-top:28px;font-size:0.92rem;color:var(--ink-soft);}
+  .insurers-line strong{color:var(--navy);}
 
-    .skip-link {
-      position: absolute;
-      top: -48px;
-      left: 16px;
-      z-index: 20;
-      padding: 10px 14px;
-      border-radius: 8px;
-      background: var(--ink);
-      color: white;
-      transition: top 0.2s ease;
-    }
+  /* ---------- Section shell ---------- */
+  section{padding:96px 0;}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(1.8rem,3vw,2.4rem);margin:14px 0 16px;}
+  .section-head p{color:var(--ink-soft);font-size:1.02rem;}
+  .kicker{font-size:0.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;}
 
-    .skip-link:focus { top: 16px; }
+  .intro-card{
+    background:var(--navy);color:#EDE7DA;
+    padding:44px 48px;border-radius:var(--radius);
+    display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;
+    margin-bottom:8px;
+  }
+  .intro-card h3{color:#fff;font-size:1.4rem;flex:1;min-width:220px;}
+  .intro-card p{color:#C9CFD8;flex:2;min-width:280px;}
 
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.92);
-      border-bottom: 1px solid rgba(223, 230, 239, 0.9);
-      backdrop-filter: blur(18px);
-    }
+  /* ---------- Services grid ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(15,44,76,0.12);border:1px solid rgba(15,44,76,0.12);}
+  .service-card{background:var(--cream);padding:38px 34px;transition:background .25s;}
+  .service-card:hover{background:var(--white);}
+  .service-icon{width:44px;height:44px;border-radius:50%;background:var(--sand);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:22px;}
+  .service-card h3{font-size:1.12rem;margin-bottom:10px;}
+  .service-card p{color:var(--ink-soft);font-size:0.94rem;}
 
-    .nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
+  /* ---------- Especializados (dark) ---------- */
+  .specialized{background:var(--navy-deep);color:#EDE7DA;}
+  .specialized .kicker{color:var(--gold-light);}
+  .specialized .section-head h2{color:#fff;}
+  .specialized .section-head p{color:#B8C0CC;}
+  .specialized-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid rgba(255,255,255,0.12);}
+  .specialized-item{padding:28px 0;border-bottom:1px solid rgba(255,255,255,0.12);}
+  .specialized-item:nth-child(odd){padding-right:40px;}
+  .specialized-item:nth-child(even){padding-left:40px;border-left:1px solid rgba(255,255,255,0.12);}
+  .specialized-item h4{font-family:'Fraunces',serif;font-weight:500;color:#fff;font-size:1.05rem;margin-bottom:8px;}
+  .specialized-item p{color:#B8C0CC;font-size:0.92rem;}
 
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      min-width: 0;
-      font-weight: 800;
-      color: var(--navy);
-    }
+  /* ---------- Valor AACSE ---------- */
+  .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;}
+  .value-item .facet-row{margin-bottom:20px;}
+  .value-item h3{font-size:1.1rem;margin-bottom:10px;}
+  .value-item p{color:var(--ink-soft);font-size:0.94rem;}
 
-        .logo-mark {
-      width: 48px;
-      height: 48px;
-      flex: 0 0 auto;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      border-radius: 12px;
-      background: #f7f4ee;
-      box-shadow: 0 12px 26px rgba(18, 53, 91, 0.16);
-    }
+  /* ---------- CTA ---------- */
+  .cta{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);
+    color:#fff;text-align:center;border-radius:var(--radius);
+    padding:70px 40px;margin:0 auto;max-width:var(--maxw);
+  }
+  .cta h2{color:#fff;font-size:clamp(1.7rem,3vw,2.2rem);margin-bottom:16px;}
+  .cta p{color:#C9CFD8;max-width:480px;margin:0 auto 34px;}
 
-    .logo-mark img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-    .brand-name { display: grid; line-height: 1.08; }
-    .brand-name small { color: var(--muted); font-size: 0.74rem; font-weight: 700; }
+  /* ---------- Contacto ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(15,44,76,0.12);border:1px solid rgba(15,44,76,0.12);margin-top:20px;}
+  .advisor-card{background:var(--white);padding:40px;}
+  .advisor-card .role{font-size:0.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;}
+  .advisor-card h3{font-size:1.25rem;margin-bottom:6px;}
+  .advisor-card .desc{color:var(--ink-soft);font-size:0.92rem;margin-bottom:22px;}
+  .advisor-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .advisor-actions .btn{padding:10px 18px;font-size:0.85rem;}
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: clamp(12px, 2vw, 26px);
-      color: #475569;
-      font-size: 0.94rem;
-      font-weight: 700;
-    }
+  footer{padding:40px 0;border-top:1px solid rgba(15,44,76,0.12);}
+  .footer-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:0.85rem;color:var(--ink-soft);}
 
-    .nav-links a:hover,
-    .nav-links a:focus-visible { color: var(--blue); }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 46px;
-      padding: 12px 18px;
-      border: 1px solid transparent;
-      border-radius: 999px;
-      font-weight: 800;
-      line-height: 1.1;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--blue); color: white; box-shadow: 0 14px 30px rgba(37, 99, 235, 0.28); }
-    .btn-secondary { background: white; border-color: var(--line); color: var(--navy); }
-    .btn-light { background: white; color: var(--blue); }
-
-    .hero { padding: clamp(56px, 8vw, 98px) 0 64px; }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
-      align-items: center;
-      gap: clamp(28px, 5vw, 58px);
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 18px;
-      padding: 8px 13px;
-      border: 1px solid rgba(37, 99, 235, 0.18);
-      border-radius: 999px;
-      background: rgba(37, 99, 235, 0.08);
-      color: var(--blue);
-      font-size: 0.84rem;
-      font-weight: 800;
-    }
-
-    h1, h2 {
-      margin: 0;
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
-      line-height: 1.06;
-      letter-spacing: 0;
-    }
-
-    h1 { max-width: 780px; font-size: clamp(2.45rem, 6vw, 5rem); }
-    h2 { font-size: clamp(2rem, 4vw, 3.15rem); }
-    h3 { margin: 0; color: var(--navy); line-height: 1.2; }
-
-    .lead {
-      max-width: 670px;
-      margin: 22px 0 0;
-      color: #475569;
-      font-size: clamp(1rem, 1.4vw, 1.16rem);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
-    }
-
-    .trust-strip {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 32px;
-    }
-
-    .trust-item {
-      padding: 16px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.86);
-    }
-
-    .trust-item strong { display: block; color: var(--navy); font-size: 1.25rem; line-height: 1; }
-    .trust-item span { display: block; margin-top: 7px; color: var(--muted); font-size: 0.88rem; font-weight: 700; }
-
-    .carrier-strip {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 10px;
-      margin-top: 24px;
-      color: var(--muted);
-      font-size: 0.94rem;
-      font-weight: 700;
-    }
-
-    .carrier-strip strong {
-      color: var(--navy);
-    }
-
-    .carrier-pill {
-      display: inline-flex;
-      align-items: center;
-      min-height: 34px;
-      padding: 7px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.86);
-      color: var(--navy);
-      font-weight: 800;
-    }
-    .hero-media {
-      position: relative;
-      min-height: 540px;
-      overflow: hidden;
-      border-radius: 28px;
-      background:
-        linear-gradient(180deg, rgba(18, 53, 91, 0.04), rgba(18, 53, 91, 0.66)),
-        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&q=82") center/cover;
-      box-shadow: var(--shadow);
-    }
-
-    .media-note {
-      position: absolute;
-      right: 22px;
-      bottom: 22px;
-      left: 22px;
-      padding: 22px;
-      border: 1px solid rgba(255, 255, 255, 0.55);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(16px);
-      box-shadow: 0 18px 44px rgba(15, 23, 42, 0.18);
-    }
-
-    .media-note p { margin: 8px 0 0; color: var(--muted); }
-
-    .section { padding: clamp(54px, 8vw, 86px) 0; }
-    .section-head { max-width: 760px; margin-bottom: 30px; }
-    .section-head p { margin: 14px 0 0; color: var(--muted); font-size: 1.04rem; }
-
-    .grid-3,
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    .card {
-      min-width: 0;
-      height: 100%;
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, 0.94);
-      box-shadow: 0 12px 34px rgba(18, 53, 91, 0.08);
-    }
-
-    .card p { margin: 10px 0 0; color: var(--muted); }
-
-    .icon {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 16px;
-      border-radius: 14px;
-      background: rgba(21, 122, 110, 0.1);
-      color: var(--teal);
-      font-weight: 900;
-    }
-
-    .feature-band {
-      display: grid;
-      grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
-      gap: clamp(24px, 4vw, 42px);
-      align-items: center;
-      padding: clamp(24px, 5vw, 44px);
-      border-radius: 28px;
-      background: var(--navy);
-      color: white;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .feature-band h2 { color: white; }
-    .feature-band p { color: rgba(255, 255, 255, 0.76); }
-    .feature-band .eyebrow { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.16); color: #d9c49f; }
-
-    .feature-image {
-      min-height: 420px;
-      border-radius: 22px;
-      background: url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=82") center/cover;
-      box-shadow: 0 24px 58px rgba(0, 0, 0, 0.3);
-    }
-
-    .coverage-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .coverage-item {
-      padding: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.07);
-    }
-
-    .coverage-item strong { display: block; color: white; }
-    .coverage-item p { margin: 6px 0 0; font-size: 0.94rem; }
-
-    .cta {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 22px;
-      align-items: center;
-      padding: clamp(28px, 5vw, 52px);
-      border-radius: 26px;
-      background: linear-gradient(135deg, var(--teal), var(--blue));
-      color: white;
-      box-shadow: var(--shadow);
-    }
-
-    .cta h2 { color: white; }
-    .cta p { margin: 12px 0 0; color: rgba(255,255,255,0.86); }
-
-    .contact-links {
-      display: grid;
-      gap: 10px;
-      margin-top: 18px;
-      color: var(--navy);
-      font-weight: 800;
-      overflow-wrap: anywhere;
-    }
-
-    .site-footer {
-      padding: 30px 0;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: center;
-    }
-
-    .footer-inner p { margin: 0; }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .feature-band,
-      .cta { grid-template-columns: 1fr; }
-      .hero-media { min-height: 440px; }
-      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .cta .btn { justify-self: start; }
-    }
-
-    @media (max-width: 760px) {
-      .nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
-      .nav-links { width: 100%; flex-wrap: wrap; gap: 10px 16px; }
-      .nav > .btn { width: 100%; }
-      .hero { padding-top: 42px; }
-      .trust-strip,
-      .grid-3,
-      .contact-grid,
-      .coverage-list { grid-template-columns: 1fr; }
-      .hero-media,
-      .feature-image { min-height: 340px; }
-      .media-note { position: static; margin: 220px 16px 16px; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
-    }
-
-    @media (max-width: 440px) {
-      .container { width: min(100% - 24px, 1120px); }
-      .btn { width: 100%; padding-inline: 14px; white-space: normal; text-align: center; }
-      .feature-band, .cta { border-radius: 20px; }
-      .card { padding: 20px; }
-    }
-  </style>
+  /* ---------- Responsive ---------- */
+  @media(max-width:860px){
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+    .services-grid{grid-template-columns:1fr 1fr;}
+    .specialized-grid{grid-template-columns:1fr;}
+    .specialized-item:nth-child(even){border-left:none;padding-left:0;}
+    .value-grid{grid-template-columns:1fr;gap:36px;}
+    .contact-grid{grid-template-columns:1fr;}
+    .stat-bar{grid-template-columns:repeat(2,1fr);row-gap:24px;}
+    .stat:nth-child(3){border-left:none;padding-left:0;}
+  }
+  @media(max-width:560px){
+    .services-grid{grid-template-columns:1fr;}
+    .wrap{padding:0 20px;}
+    .intro-card{padding:32px 26px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+</style>
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+<a href="#contenido" class="skip-link">Saltar al contenido</a>
 
-  <header class="site-header">
-    <div class="container nav" aria-label="Navegación principal">
-      <a class="brand" href="#inicio" aria-label="AACSE Seguros, inicio">
-        <span class="logo-mark" aria-hidden="true"><img src="./logo-aacse.jpg" alt="AACSE Logo" /></span>
-        <span class="brand-name">AACSE <small>Anaya Asesoría y Consultoría en Seguros</small></span>
-      </a>
+<header>
+  <div class="nav">
+    <a href="#inicio" class="brand">
+      <img src="logo-aacse.jpg" alt="Logo AACSE">
+      <span>AACSE<small>Anaya Asesoría y Consultoría en Seguros</small></span>
+    </a>
+    <nav class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#especializados">Especializados</a>
+      <a href="#valor">Valor AACSE</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://www.instagram.com/anaya_seguros_" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <a class="btn btn-gold" href="https://wa.me/525644702939?text=Hola%20AACSE%2C%20quiero%20cotizar%20un%20seguro" target="_blank" rel="noopener">Cotizar ahora</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+  </div>
+  <nav id="mobileMenu" class="mobile-menu" hidden>
+    <a href="#servicios">Servicios</a>
+    <a href="#especializados">Especializados</a>
+    <a href="#valor">Valor AACSE</a>
+    <a href="#contacto">Contacto</a>
+    <a href="https://www.instagram.com/anaya_seguros_" target="_blank" rel="noopener">Instagram</a>
+  </nav>
+</header>
 
-      <nav class="nav-links" aria-label="Secciones">
-        <a href="#servicios">Servicios</a>
-        <a href="#especializados">Especializados</a>
-        <a href="#valor">Valor AACSE</a>
-        <a href="#contacto">Contacto</a>
-        <a href="https://www.instagram.com/anaya_seguros_?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==">Instagram</a>
-      </nav>
+<main id="contenido">
 
-      <a class="btn btn-primary" href="https://wa.me/525644702939?text=Hola%20AACSE%2C%20quiero%20cotizar%20un%20seguro" target="_blank" rel="noopener">Cotizar ahora</a>
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div class="eyebrow"><span class="facet"></span> Seguros especializados en México</div>
+      <h1>Protección clara para tu empresa, patrimonio y proyectos.</h1>
+      <p class="hero-sub">AACSE Seguros acompaña a personas, familias, profesionales y empresas con asesoría integral para encontrar coberturas confiables, claras y alineadas a cada necesidad.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="https://api.whatsapp.com/send?phone=525644702939&text=Hola%20AACSE%2C%20busco%20asesor%C3%ADa%20especializada%20y%20una%20cotizaci%C3%B3n%20personalizada." target="_blank" rel="noopener">Hablar por WhatsApp</a>
+        <a class="btn btn-outline" href="#servicios">Ver soluciones</a>
+      </div>
+
+      <div class="stat-bar">
+        <div class="stat"><div class="num">30+</div><div class="label">años de experiencia en el sector asegurador</div></div>
+        <div class="stat"><div class="num">5+</div><div class="label">años como asesores expertos</div></div>
+        <div class="stat"><div class="num">360°</div><div class="label">soluciones para distintos ramos</div></div>
+        <div class="stat"><div class="num">10+</div><div class="label">aseguradoras cotizadas</div></div>
+      </div>
+      <p class="insurers-line">Cotizamos con más de 10 aseguradoras: <strong>GNP · Quálitas · AXA · MAPFRE</strong>, entre otras.</p>
     </div>
-  </header>
+  </section>
 
-  <main id="contenido">
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Seguros especializados en México</p>
-          <h1>Protección clara para tu empresa, patrimonio y proyectos.</h1>
-          <p class="lead">AACSE Seguros acompaña a personas, familias, profesionales y empresas con asesoría integral para encontrar coberturas confiables, claras y alineadas a cada necesidad.</p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=525644702939&text=Hola%20AACSE%2C%20busco%20asesor%C3%ADa%20especializada%20y%20una%20cotizaci%C3%B3n%20personalizada.">Hablar por WhatsApp</a>
-            <a class="btn btn-secondary" href="#servicios">Ver soluciones</a>
-          </div>
-
-          <div class="trust-strip" aria-label="Indicadores de confianza">
-            <div class="trust-item"><strong>30+</strong><span>años de experiencia en el sector asegurador</span></div>
-            <div class="trust-item"><strong>5+</strong><span>años como asesores expertos</span></div>
-            <div class="trust-item"><strong>360°</strong><span>soluciones para distintos ramos</span></div>
-          </div>
-
-          <div class="carrier-strip" aria-label="Aseguradoras disponibles para cotización">
-            <strong>Cotizamos con más de 10 aseguradoras:</strong>
-            <span class="carrier-pill">GNP</span>
-            <span class="carrier-pill">Quálitas</span>
-            <span class="carrier-pill">AXA</span>
-            <span class="carrier-pill">MAPFRE</span>
-            <span>entre otras.</span>
-          </div>
-        </div>
-
-        <div class="hero-media" role="img" aria-label="Edificio corporativo protegido por soluciones de seguros">
-          <div class="media-note">
-            <h3>Asesoría clara, protección real.</h3>
-            <p>Evaluamos tus necesidades y te ayudamos a comparar opciones para proteger activos, operación, familia y estabilidad financiera.</p>
-          </div>
-        </div>
+  <section id="servicios">
+    <div class="wrap">
+      <div class="intro-card">
+        <h3>Asesoría clara, protección real.</h3>
+        <p>Evaluamos tus necesidades y te ayudamos a comparar opciones para proteger activos, operación, familia y estabilidad financiera.</p>
       </div>
-    </section>
-
-    <section class="section" id="servicios">
-      <div class="container">
-        <div class="section-head">
-          <h2>Seguros para cada etapa y necesidad</h2>
-          <p>Soluciones para proteger tu salud, familia, auto, patrimonio y empresa, con asesoría clara para elegir el seguro adecuado en cada etapa.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card"><div class="icon" aria-hidden="true">🩺</div><h3>Gastos médicos</h3><p>Respaldo financiero y asesoría para enfrentar imprevistos de salud con mayor tranquilidad.</p></article>
-          <article class="card"><div class="icon" aria-hidden="true">🛡️</div><h3>Vida y patrimonio</h3><p>Planes diseñados para proteger a tu familia, patrimonio y estabilidad a futuro.</p></article>
-          <article class="card"><div class="icon" aria-hidden="true">🚗</div><h3>Autos y flotillas</h3><p>Seguros para autos particulares, unidades de trabajo y flotillas empresariales.</p></article>
-          <article class="card"><div class="icon" aria-hidden="true">🏠</div><h3>Hogar y bienes personales</h3><p>Coberturas para cuidar tu casa, pertenencias y tranquilidad ante daños, robo o imprevistos.</p></article>
-          <article class="card"><div class="icon" aria-hidden="true">🏢</div><h3>Empresarial</h3><p>Programas para proteger activos, responsabilidad civil, operación y continuidad del negocio.</p></article>
-          <article class="card"><div class="icon" aria-hidden="true">🧰</div><h3>Coberturas especializadas</h3><p>Opciones para equipos, maquinaria, responsabilidad civil y proyectos que requieren una protección específica.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="especializados">
-      <div class="container feature-band">
-        <div class="feature-image" role="img" aria-label="Obra de construcción con maquinaria pesada"></div>
-        <div>
-          <p class="eyebrow">Construcción y operación en campo</p>
-          <h2>Coberturas para escenarios donde detenerse cuesta.</h2>
-          <p>Diseñamos alternativas para riesgos complejos donde un siniestro puede frenar una obra, generar pérdidas económicas o afectar a terceros.</p>
-
-          <div class="coverage-list">
-            <div class="coverage-item"><strong>Daños materiales</strong><p>Accidentes, incendios, deslaves, derrumbes, colisiones y volcadura.</p></div>
-            <div class="coverage-item"><strong>Robo con violencia</strong><p>Protección frente al robo de equipo o herramientas en sitio de trabajo.</p></div>
-            <div class="coverage-item"><strong>Transporte</strong><p>Cobertura mientras el equipo se traslada entre obras o instalaciones.</p></div>
-            <div class="coverage-item"><strong>Responsabilidad civil</strong><p>Daños materiales o personales ocasionados a terceros durante la operación.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="valor">
-      <div class="container">
-        <div class="section-head">
-          <h2>El valor de AACSE</h2>
-          <p>Un seguro bien elegido no es solo una póliza: es una decisión estratégica para cuidar inversión, liquidez y continuidad.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card"><div class="icon" aria-hidden="true">⏱️</div><h3>Continuidad operativa</h3><p>Reduce tiempos muertos ante siniestros en obra, empresa o actividades clave.</p></article>
-          <article class="card"><div class="icon" aria-hidden="true">💼</div><h3>Protección financiera</h3><p>Evita pérdidas económicas que puedan poner en riesgo tus proyectos o patrimonio.</p></article>
-          <article class="card"><div class="icon" aria-hidden="true">🤝</div><h3>Asesoría especializada</h3><p>Te ayudamos a elegir coberturas según el alcance, presupuesto y naturaleza de cada necesidad.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="cta-title">
-      <div class="container cta">
-        <div>
-          <h2 id="cta-title">¿Quieres cotizar un seguro?</h2>
-          <p>Cuéntanos qué necesitas proteger y recibe asesoría personalizada para encontrar una opción adecuada.</p>
-        </div>
-        <a class="btn btn-light" href="https://mail.google.com/mail/?view=cm&fs=1&to=aacse21@gmail.com&su=Cotizaci%C3%B3n%20AACSE%20Seguros&body=Hola%20AACSE%2C%20quiero%20recibir%20asesor%C3%ADa%20para%20cotizar%20un%20seguro.%20Gracias.">Enviar mensaje</a>
-      </div>
-    </section>
-
-    <section class="section" id="contacto">
-      <div class="container">
-        <div class="section-head">
-          <h2>Contáctanos</h2>
-          <p>Nuestro equipo está listo para asesorarte y diseñar una solución de seguros alineada a tus necesidades.</p>
-          <div class="hero-actions"><a class="btn btn-secondary" href="https://www.instagram.com/anaya_seguros_?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==">Visitar Instagram</a></div>
-        </div>
-
-        <div class="contact-grid">
-          <article class="card">
-            <h3>Act. Jorge Conrado Anaya Funes</h3>
-            <p>Asesoría y atención personalizada.</p>
-            <div class="contact-links">
-              <a href="https://wa.me/525554015699?text=Hola%20Conrado%2C%20quiero%20recibir%20asesor%C3%ADa%20de%20AACSE%20Seguros">WhatsApp 55 5401 5699</a>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=conradoanayafunes@gmail.com&su=Asesor%C3%ADa%20AACSE%20Seguros&body=Hola%20Conrado%2C%20quiero%20recibir%20asesor%C3%ADa%20sobre%20un%20seguro.%20Gracias.">Enviar correo a Conrado</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>Arq. Gerardo Alberto Anaya Funes</h3>
-            <p>Asesoría y atención personalizada.</p>
-            <div class="contact-links">
-              <a href="https://wa.me/525644702939?text=Hola%20Gerardo%2C%20quiero%20recibir%20asesor%C3%ADa%20de%20AACSE%20Seguros">WhatsApp 56 4470 2939</a>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gerardo.a.anaya.funes@gmail.com&su=Asesor%C3%ADa%20AACSE%20Seguros&body=Hola%20Gerardo%2C%20quiero%20recibir%20asesor%C3%ADa%20sobre%20un%20seguro.%20Gracias.">Enviar correo a Gerardo</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 AACSE Anaya Asesoría y Consultoría en Seguros.</p>
-      <p>Seguros especializados y asesoría de confianza.</p>
     </div>
-  </footer>
+    <div class="wrap" style="margin-top:56px;">
+      <div class="section-head">
+        <div class="kicker">Servicios</div>
+        <h2>Seguros para cada etapa y necesidad</h2>
+        <p>Soluciones para proteger tu salud, familia, auto, patrimonio y empresa, con asesoría clara para elegir el seguro adecuado en cada etapa.</p>
+      </div>
+    </div>
+    <div class="wrap" style="padding:0;">
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🩺</div>
+          <h3>Gastos médicos</h3>
+          <p>Respaldo financiero y asesoría para enfrentar imprevistos de salud con mayor tranquilidad.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3>Vida y patrimonio</h3>
+          <p>Planes diseñados para proteger a tu familia, patrimonio y estabilidad a futuro.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3>Autos y flotillas</h3>
+          <p>Seguros para autos particulares, unidades de trabajo y flotillas empresariales.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Hogar y bienes personales</h3>
+          <p>Coberturas para cuidar tu casa, pertenencias y tranquilidad ante daños, robo o imprevistos.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Empresarial</h3>
+          <p>Programas para proteger activos, responsabilidad civil, operación y continuidad del negocio.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🧰</div>
+          <h3>Coberturas especializadas</h3>
+          <p>Opciones para equipos, maquinaria, responsabilidad civil y proyectos que requieren una protección específica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="specialized" id="especializados">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Construcción y operación en campo</div>
+        <h2>Coberturas para escenarios donde detenerse cuesta.</h2>
+        <p>Diseñamos alternativas para riesgos complejos donde un siniestro puede frenar una obra, generar pérdidas económicas o afectar a terceros.</p>
+      </div>
+      <div class="specialized-grid">
+        <div class="specialized-item">
+          <h4>Daños materiales</h4>
+          <p>Accidentes, incendios, deslaves, derrumbes, colisiones y volcadura.</p>
+        </div>
+        <div class="specialized-item">
+          <h4>Robo con violencia</h4>
+          <p>Protección frente al robo de equipo o herramientas en sitio de trabajo.</p>
+        </div>
+        <div class="specialized-item">
+          <h4>Transporte</h4>
+          <p>Cobertura mientras el equipo se traslada entre obras o instalaciones.</p>
+        </div>
+        <div class="specialized-item">
+          <h4>Responsabilidad civil</h4>
+          <p>Daños materiales o personales ocasionados a terceros durante la operación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="valor">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Valor AACSE</div>
+        <h2>Un seguro bien elegido no es solo una póliza.</h2>
+        <p>Es una decisión estratégica para cuidar inversión, liquidez y continuidad.</p>
+      </div>
+      <div class="value-grid">
+        <div class="value-item">
+          <div class="facet-row"><span class="facet"></span><span class="facet-rule"></span></div>
+          <h3>Continuidad operativa</h3>
+          <p>Reduce tiempos muertos ante siniestros en obra, empresa o actividades clave.</p>
+        </div>
+        <div class="value-item">
+          <div class="facet-row"><span class="facet"></span><span class="facet-rule"></span></div>
+          <h3>Protección financiera</h3>
+          <p>Evita pérdidas económicas que puedan poner en riesgo tus proyectos o patrimonio.</p>
+        </div>
+        <div class="value-item">
+          <div class="facet-row"><span class="facet"></span><span class="facet-rule"></span></div>
+          <h3>Asesoría especializada</h3>
+          <p>Te ayudamos a elegir coberturas según el alcance, presupuesto y naturaleza de cada necesidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta">
+        <h2>¿Quieres cotizar un seguro?</h2>
+        <p>Cuéntanos qué necesitas proteger y recibe asesoría personalizada para encontrar una opción adecuada.</p>
+        <a class="btn btn-gold" href="https://mail.google.com/mail/?view=cm&fs=1&to=aacse21@gmail.com&su=Cotizaci%C3%B3n%20AACSE%20Seguros&body=Hola%20AACSE%2C%20quiero%20recibir%20asesor%C3%ADa%20para%20cotizar%20un%20seguro.%20Gracias." target="_blank" rel="noopener">Enviar mensaje</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Contáctanos</div>
+        <h2>Nuestro equipo está listo para asesorarte</h2>
+        <p>Diseñamos una solución de seguros alineada a tus necesidades — escríbele directo a quien prefieras.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="advisor-card">
+          <div class="role">Asesor</div>
+          <h3>Act. Jorge Conrado Anaya Funes</h3>
+          <p class="desc">Asesoría y atención personalizada.</p>
+          <div class="advisor-actions">
+            <a class="btn btn-gold" href="https://wa.me/525554015699?text=Hola%20Conrado%2C%20quiero%20recibir%20asesor%C3%ADa%20de%20AACSE%20Seguros" target="_blank" rel="noopener">WhatsApp 55 5401 5699</a>
+            <a class="btn btn-outline" href="https://mail.google.com/mail/?view=cm&fs=1&to=conradoanayafunes@gmail.com&su=Asesor%C3%ADa%20AACSE%20Seguros&body=Hola%20Conrado%2C%20quiero%20recibir%20asesor%C3%ADa%20sobre%20un%20seguro.%20Gracias." target="_blank" rel="noopener">Enviar correo</a>
+          </div>
+        </div>
+        <div class="advisor-card">
+          <div class="role">Asesor</div>
+          <h3>Arq. Gerardo Alberto Anaya Funes</h3>
+          <p class="desc">Asesoría y atención personalizada.</p>
+          <div class="advisor-actions">
+            <a class="btn btn-gold" href="https://wa.me/525644702939?text=Hola%20Gerardo%2C%20quiero%20recibir%20asesor%C3%ADa%20de%20AACSE%20Seguros" target="_blank" rel="noopener">WhatsApp 56 4470 2939</a>
+            <a class="btn btn-outline" href="https://mail.google.com/mail/?view=cm&fs=1&to=gerardo.a.anaya.funes@gmail.com&su=Asesor%C3%ADa%20AACSE%20Seguros&body=Hola%20Gerardo%2C%20quiero%20recibir%20asesor%C3%ADa%20sobre%20un%20seguro.%20Gracias." target="_blank" rel="noopener">Enviar correo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 AACSE Anaya Asesoría y Consultoría en Seguros.</span>
+    <span>Seguros especializados y asesoría de confianza.</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://api.whatsapp.com/send?phone=525644702939&text=Hola%20AACSE%2C%20busco%20asesor%C3%ADa%20especializada%20y%20una%20cotizaci%C3%B3n%20personalizada." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">💬</a>
+
+<script>
+  // Menú móvil
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    mobileMenu.hidden = !isOpen;
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.textContent = isOpen ? '✕' : '☰';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    mobileMenu.hidden = true;
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.textContent = '☰';
+  }));
+
+  // Animación de aparición al hacer scroll
+  const revealEls = document.querySelectorAll('.service-card, .specialized-item, .value-item, .advisor-card, .intro-card');
+  revealEls.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
