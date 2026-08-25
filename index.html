@@ -133,6 +133,12 @@
   .insurers-line{margin-top:28px;font-size:0.92rem;color:var(--ink-soft);}
   .insurers-line strong{color:var(--navy);}
 
+  .insurers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(15,44,76,0.12);border:1px solid rgba(15,44,76,0.12);margin-top:8px;}
+  .insurer-card{background:var(--white);padding:32px 28px;}
+  .insurer-card .yr{font-size:0.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px;}
+  .insurer-card h3{font-size:1.08rem;margin-bottom:10px;}
+  .insurer-card p{color:var(--ink-soft);font-size:0.88rem;}
+
   /* ---------- Section shell ---------- */
   section{padding:96px 0;}
   .section-head{max-width:640px;margin-bottom:56px;}
@@ -204,6 +210,7 @@
     nav.links{display:none;}
     .menu-toggle{display:block;}
     .services-grid{grid-template-columns:1fr 1fr;}
+    .insurers-grid{grid-template-columns:1fr 1fr;}
     .specialized-grid{grid-template-columns:1fr;}
     .specialized-item:nth-child(even){border-left:none;padding-left:0;}
     .value-grid{grid-template-columns:1fr;gap:36px;}
@@ -216,6 +223,7 @@
   }
   @media(max-width:560px){
     .services-grid{grid-template-columns:1fr;}
+    .insurers-grid{grid-template-columns:1fr;}
     .wrap{padding:0 20px;}
     .intro-card{padding:32px 26px;}
   }
@@ -281,6 +289,37 @@
         <h3>Asesoría clara, protección real.</h3>
         <p>Evaluamos tus necesidades y te ayudamos a comparar opciones para proteger activos, operación, familia y estabilidad financiera.</p>
       </div>
+    </div>
+
+    <div class="wrap" style="margin-top:72px;">
+      <div class="section-head">
+        <div class="kicker">Respaldo</div>
+        <h2>Aseguradoras con las que trabajamos</h2>
+        <p>No dependemos de una sola compañía. Comparamos entre las aseguradoras más sólidas de México para encontrar la cobertura, el precio y el respaldo que mejor se ajustan a cada caso.</p>
+      </div>
+      <div class="insurers-grid">
+        <div class="insurer-card">
+          <div class="yr">Desde 1901</div>
+          <h3>GNP Seguros</h3>
+          <p>Parte del Grupo Bal. Con más de 120 años de historia, es la aseguradora líder del mercado mexicano y cuenta con la red de oficinas, agentes y talleres convenidos más amplia del país.</p>
+        </div>
+        <div class="insurer-card">
+          <div class="yr">Desde 1994</div>
+          <h3>Quálitas</h3>
+          <p>Especializada en seguros de auto. Es la aseguradora líder del ramo automotriz en México desde hace más de una década, con cerca de una tercera parte del mercado nacional.</p>
+        </div>
+        <div class="insurer-card">
+          <div class="yr">En México desde 2008</div>
+          <h3>AXA</h3>
+          <p>Parte del grupo francés AXA, una de las aseguradoras más grandes del mundo con presencia en más de 50 países. En México es una de las tres principales aseguradoras multirramo.</p>
+        </div>
+        <div class="insurer-card">
+          <div class="yr">Origen 1933</div>
+          <h3>MAPFRE</h3>
+          <p>Aseguradora multinacional de origen español con presencia en más de 40 países. Es el grupo asegurador líder en América Latina, con más de tres décadas operando en México.</p>
+        </div>
+      </div>
+      <p class="insurers-line">También cotizamos con otras aseguradoras reconocidas según el caso, para asegurar la mejor combinación de cobertura y precio.</p>
     </div>
     <div class="wrap" style="margin-top:56px;">
       <div class="section-head">
@@ -460,7 +499,7 @@
   }));
 
   // Animación de aparición al hacer scroll
-  const revealEls = document.querySelectorAll('.service-card, .specialized-item, .value-item, .advisor-card, .intro-card');
+  const revealEls = document.querySelectorAll('.service-card, .insurer-card, .specialized-item, .value-item, .advisor-card, .intro-card');
   revealEls.forEach(el => el.classList.add('reveal'));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
